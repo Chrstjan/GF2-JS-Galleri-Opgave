@@ -25,6 +25,20 @@ const createImageGallery = () => {
 
     gallery.appendChild(galleryFigure);
     galleryFigure.appendChild(galleryImage);
+
+    const openModal = () => {
+      const modalWindow = document.createElement("figure");
+      modalWindow.classList.add("modal-image");
+      gallery.innerHTML = "";
+      modalWindow.appendChild(galleryImage);
+      gallery.appendChild(modalWindow);
+
+      modalWindow.addEventListener("click", () => {
+        gallery.innerHTML = "";
+        createImageGallery();
+      });
+    };
+    galleryImage.addEventListener("click", openModal);
   });
 };
 
