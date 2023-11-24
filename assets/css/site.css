@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Oswald&display=swap");
 /* font-family: "Merriweather", serif;
 font-family: "Oswald", sans-serif; */
+@import url(gallery.css);
+
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Merriweather", sans-serif;
 }
